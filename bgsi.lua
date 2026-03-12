@@ -1,0 +1,1 @@
+print("stilqn e seksi")
