@@ -922,6 +922,7 @@ function Library:create(options)
 
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
+	creditsTab:credit{Name = "Xan888", Description = "Xan's Hub Developer & Owner", Discord = "@c.minor", Github = "Xan888"}
 
 	return mt
 end
@@ -2844,6 +2845,25 @@ function Library:credit(options)
 
 			v3rmillionContainer.MouseButton1Click:connect(function()
 				setclipboard(options.V3rmillion)
+			end)
+		end
+
+		if options.Github then
+			local GithubContainer = creditContainer:object("TextButton", {
+				AnchorPoint = Vector2.new(1, 1),
+				Size = UDim2.fromOffset(24, 24),
+				Position = UDim2.new(1, -40, 1, -8),
+				Theme = {BackgroundColor3 = {"Main", 10}}
+			}):round(5):tooltip("copy v3rm")
+			local Github = GithubContainer:object("ImageLabel", {
+				Image = "http://www.roblox.com/asset/?id=132024101049031",
+				Size = UDim2.new(1, -4, 1, -4),
+				Centered = true,
+				BackgroundTransparency = 1
+			})
+
+			GithubContainer.MouseButton1Click:connect(function()
+				setclipboard(options.Github)
 			end)
 		end
 	end
