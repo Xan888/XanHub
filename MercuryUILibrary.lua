@@ -415,7 +415,28 @@ function Library:set_status(txt)
 end
 
 function Library:create(options)
+-- Add this after creating the Window
+if UserInputService.TouchEnabled then
+    local mobileButton = Instance.new("TextButton")
+    mobileButton.Size = UDim2.fromOffset(50, 50)
+    mobileButton.Position = UDim2.new(0, 10, 0.5, 0)
+    mobileButton.BackgroundColor3 = Color3.fromRGB(70, 130, 180)
+    mobileButton.Text = "☰"
+    mobileButton.TextColor3 = Color3.new(1,1,1)
+    mobileButton.TextSize = 24
+    mobileButton.ZIndex = 999
+    mobileButton.Parent = game:GetService("CoreGui")
 
+    -- Round it
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(1, 0)
+    corner.Parent = mobileButton
+
+    mobileButton.MouseButton1Click:Connect(function()
+        Library:show(not Library.Toggled)
+    end)
+end
+	
 	local settings = {
 		Theme = "Dark"
 	}
