@@ -2854,9 +2854,9 @@ function Library:credit(options)
 				Size = UDim2.fromOffset(24, 24),
 				Position = UDim2.new(1, -40, 1, -8),
 				Theme = {BackgroundColor3 = {"Main", 10}}
-			}):round(5):tooltip("copy v3rm")
+			}):round(5):tooltip("copy github")
 			local Github = GithubContainer:object("ImageLabel", {
-				Image = "http://www.roblox.com/asset/?id=102816031861909",
+				Image = "https://assetdelivery.roblox.com/v1/asset/?id=102816031861909",
 				Size = UDim2.new(1, -4, 1, -4),
 				Centered = true,
 				BackgroundTransparency = 1
