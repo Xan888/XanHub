@@ -922,7 +922,7 @@ function Library:create(options)
 
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
-	creditsTab:credit{Name = "Xan888", Description = "Xan's Hub Developer & Owner", Discord = "@c.minor", Github = "Xan888"}
+	creditsTab:credit{Name = "Xan888", Description = "Xan's Hub Developer & Owner", Discord = "c.minor", Github = "Xan888"}
 
 	return mt
 end
@@ -2864,7 +2864,6 @@ function Library:credit(options)
 
 			GithubContainer.MouseButton1Click:connect(function()
 				setclipboard(options.Github)
-					print("test")
 			end)
 		end
 	end
