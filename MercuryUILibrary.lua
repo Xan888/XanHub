@@ -416,7 +416,7 @@ end
 
 function Library:create(options)
 -- Add this after creating the Window
-if UserInputService.TouchEnabled then
+--if UserInputService.TouchEnabled then
     local mobileButton = Instance.new("TextButton")
     mobileButton.Size = UDim2.fromOffset(50, 50)
     mobileButton.Position = UDim2.new(0, 10, 0.5, 0)
@@ -435,7 +435,7 @@ if UserInputService.TouchEnabled then
     mobileButton.MouseButton1Click:Connect(function()
         Library:show(not Library.Toggled)
     end)
-end
+--end
 	
 	local settings = {
 		Theme = "Dark"
